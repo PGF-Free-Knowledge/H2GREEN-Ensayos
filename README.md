@@ -1,3 +1,7 @@
+![Banner H2GREEN](banner_h2green_pgf.png)
+
+<br>
+
 # H2GREEN - Plataforma Automatizada de Ensayo para Evaluación de Materiales en Condiciones Asociadas a Hidrógeno
 
 ## Descripción General
