@@ -14,10 +14,10 @@ Presenta la arquitectura completa del sistema, mostrando la interacción entre e
 
 - [Dashboard H2GREEN](../../python/Dashboards/Dashboard_H2Green_v1.0.py)
 - [Arduino Mega Maestro](../../arduino/maestro/Mega_H2Green_v1.0.ino)
-- [Arduino Presión](../../arduino/presion/Presion_H2Green_v1.ino)
-- [Arduino Fuerza](../../arduino/fuerza/Fuerza_H2Green_v1.ino)
-- [Arduino Temperatura](../../arduino/temperatura/Temperatura_H2Green_v1.ino)
-- [Arduino Velocidad](../../arduino/velocidad/Velocidad_H2Green_v1.ino)
+- [Arduino Presión](../../arduino/presion/Presion_H2Green_v1.0.ino)
+- [Arduino Fuerza](../../arduino/fuerza/Fuerza_H2Green_v1.0.ino)
+- [Arduino Temperatura](../../arduino/temperatura/Temperatura_H2Green_v1.0.ino)
+- [Arduino Velocidad](../../arduino/velocidad/Velocidad_H2Green_v1.0.ino)
 
 ---
 
@@ -29,7 +29,7 @@ Describe el funcionamiento del lazo de presión, incluyendo purga, presurizació
 
 ### Código asociado
 
-- [Arduino Presión](../../arduino/presion/Presion_H2Green_v1.ino)
+- [Arduino Presión](../../arduino/presion/Presion_H2Green_v1.0.ino)
 - [Dashboard H2GREEN](../../python/Dashboards/Dashboard_H2Green_v1.0.py)
 
 ---
@@ -38,11 +38,11 @@ Describe el funcionamiento del lazo de presión, incluyendo purga, presurizació
 
 **Archivo:** `03_Secuencia_Detallada_Lazo_de_Temperatura.png`
 
-Describe el sistema de control de temperatura mediante el Arduino esclavo, el sensor de temperatura, el SSR y el calefactor.
+Describe el sistema de control de temperatura mediante el Arduino esclavo, el sensor DS18B20, el relé de estado sólido (SSR) y el calefactor.
 
 ### Código asociado
 
-- [Arduino Temperatura](../../arduino/temperatura/Temperatura_H2Green_v1.ino)
+- [Arduino Temperatura](../../arduino/temperatura/Temperatura_H2Green_v1.0.ino)
 - [Dashboard H2GREEN](../../python/Dashboards/Dashboard_H2Green_v1.0.py)
 
 ---
@@ -55,7 +55,7 @@ Presenta el control del motor paso a paso mediante el driver SH-1108 y el Arduin
 
 ### Código asociado
 
-- [Arduino Velocidad](../../arduino/velocidad/Velocidad_H2Green_v1.ino)
+- [Arduino Velocidad](../../arduino/velocidad/Velocidad_H2Green_v1.0.ino)
 - [Dashboard H2GREEN](../../python/Dashboards/Dashboard_H2Green_v1.0.py)
 
 ---
@@ -64,11 +64,11 @@ Presenta el control del motor paso a paso mediante el driver SH-1108 y el Arduin
 
 **Archivo:** `05_Secuencia_Detallada_Lazo_de_Fuerza_y_Desplazamiento.png`
 
-Describe la adquisición de fuerza mediante la celda de carga y el módulo HX711, junto con el desplazamiento obtenido mediante la cámara Basler para generar las curvas Fuerza–Desplazamiento y Esfuerzo–Deformación.
+Describe la adquisición de fuerza mediante la celda de carga KIS y el módulo HX711, junto con el desplazamiento obtenido mediante la cámara Basler para generar las curvas Fuerza–Desplazamiento y Esfuerzo–Deformación.
 
 ### Código asociado
 
-- [Arduino Fuerza](../../arduino/fuerza/Fuerza_H2Green_v1.ino)
+- [Arduino Fuerza](../../arduino/fuerza/Fuerza_H2Green_v1.0.ino)
 - [Dashboard H2GREEN](../../python/Dashboards/Dashboard_H2Green_v1.0.py)
 
 ---
@@ -82,11 +82,11 @@ Resume la operación completa del sistema, integrando todos los lazos de control
 ### Código asociado
 
 - [Dashboard H2GREEN](../../python/Dashboards/Dashboard_H2Green_v1.0.py)
-- [Arduino Mega Maestro](../../arduino/maestro/Maestro_H2Green_v1.ino)
+- [Arduino Mega Maestro](../../arduino/maestro/Mega_H2Green_v1.0.ino)
 
 ---
 
-## Estado del proyecto
+# Estado del proyecto
 
 **Versión del sistema:** Prototipo 001
 
@@ -97,11 +97,27 @@ Resume la operación completa del sistema, integrando todos los lazos de control
 - ✔ Arduino Mega Maestro operativo.
 - ✔ Cuatro Arduino esclavos operativos.
 - ✔ Integración de la cámara Basler en desarrollo.
-- ✔ Integración progresiva de hardware definitivo (transmisores, electroválvulas y sistema térmico).
+- ✔ Integración progresiva de hardware definitivo (transmisores de presión, electroválvulas y sistema térmico).
+
+---
+
+## Estructura del proyecto relacionada
+
+```text
+arduino/
+├── maestro/
+├── presion/
+├── fuerza/
+├── temperatura/
+└── velocidad/
+
+python/
+└── Dashboards/
+```
 
 ---
 
 **Proyecto H2GREEN**
 
-Universidad Técnica Federico Santa María
+**Universidad Técnica Federico Santa María**  
 Departamento de Ingeniería Mecánica / Departamento de Electrónica
