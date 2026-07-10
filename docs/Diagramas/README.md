@@ -1,16 +1,29 @@
-# Diagramas del Proyecto H2GREEN
+# H2GREEN - Diagramas del Proyecto
 
-Esta carpeta contiene los diagramas oficiales del proyecto **H2GREEN**, desarrollados para documentar la arquitectura del sistema, los lazos de control y la secuencia operacional del prototipo de ensayo automatizado para evaluación de materiales en condiciones asociadas al hidrógeno.
+Esta carpeta reúne la documentación gráfica oficial del proyecto **H2GREEN**, desarrollada para describir la arquitectura general del sistema, los lazos de control implementados y la secuencia operacional del prototipo de ensayo automatizado para evaluación de materiales en atmósferas asociadas al hidrógeno.
+
+---
+
+# Índice
+
+1. Arquitectura General del Sistema
+2. Lazo de Control de Presión
+3. Lazo de Control de Temperatura
+4. Lazo de Control de Desplazamiento
+5. Lazo de Fuerza y Desplazamiento
+6. Secuencia Completa del Proceso
 
 ---
 
 # 01. Arquitectura General del Sistema
 
-**Archivo:** `01_Arquitectura_General_del_Sistema.png`
+![Arquitectura General](01_Arquitectura_General_del_Sistema.png)
 
-Presenta la arquitectura completa del sistema, mostrando la interacción entre el Dashboard desarrollado en Python, el Arduino Mega Maestro, los cuatro Arduino esclavos, la cámara Basler y los dispositivos de campo.
+## Objetivo
 
-### Implementación relacionada
+Presentar la arquitectura general del sistema, mostrando la interacción entre el Dashboard H2GREEN, Arduino Mega Maestro, Arduino esclavos, cámara Basler y dispositivos de campo.
+
+## Implementación relacionada
 
 - [Dashboard H2GREEN](../../python/Dashboards/Dashboard_H2Green_v1.0.py)
 - [Arduino Mega Maestro](../../arduino/maestro/Mega_H2Green_v1.0.ino)
@@ -23,101 +36,97 @@ Presenta la arquitectura completa del sistema, mostrando la interacción entre e
 
 # 02. Secuencia Detallada del Lazo de Presión
 
-**Archivo:** `02_Secuencia_Detallada_Lazo_de_Presion.png`
+![Lazo Presión](02_Secuencia_Detallada_Lazo_de_Presion.png)
 
-Describe el funcionamiento del lazo de presión, incluyendo purga, presurización, estabilización, monitoreo y control de las electroválvulas.
+## Objetivo
 
-### Código asociado
+Documentar el funcionamiento del lazo de presión, incluyendo purga, presurización, estabilización y control de electroválvulas.
 
-- [Arduino Presión](../../arduino/presion/Presion_H2Green_v1.0.ino)
+## Implementación relacionada
+
 - [Dashboard H2GREEN](../../python/Dashboards/Dashboard_H2Green_v1.0.py)
+- [Arduino Presión](../../arduino/presion/Presion_H2Green_v1.0.ino)
 
 ---
 
 # 03. Secuencia Detallada del Lazo de Temperatura
 
-**Archivo:** `03_Secuencia_Detallada_Lazo_de_Temperatura.png`
+![Lazo Temperatura](03_Secuencia_Detallada_Lazo_de_Temperatura.png)
 
-Describe el sistema de control de temperatura mediante el Arduino esclavo, el sensor DS18B20, el relé de estado sólido (SSR) y el calefactor.
+## Objetivo
 
-### Código asociado
+Describir el sistema de control térmico compuesto por sensor de temperatura, Arduino esclavo, SSR y calefactor.
 
-- [Arduino Temperatura](../../arduino/temperatura/Temperatura_H2Green_v1.0.ino)
+## Implementación relacionada
+
 - [Dashboard H2GREEN](../../python/Dashboards/Dashboard_H2Green_v1.0.py)
+- [Arduino Temperatura](../../arduino/temperatura/Temperatura_H2Green_v1.0.ino)
 
 ---
 
 # 04. Secuencia Detallada del Lazo de Desplazamiento del Motor
 
-**Archivo:** `04_Secuencia_Detallada_Lazo_de_Desplazamiento_Motor.png`
+![Lazo Desplazamiento](04_Secuencia_Detallada_Lazo_de_Desplazamiento_Motor.png)
 
-Presenta el control del motor paso a paso mediante el driver SH-1108 y el Arduino esclavo de velocidad.
+## Objetivo
 
-### Código asociado
+Describir el control del desplazamiento mediante Arduino, driver SH-1108 y motor paso a paso.
 
-- [Arduino Velocidad](../../arduino/velocidad/Velocidad_H2Green_v1.0.ino)
+## Implementación relacionada
+
 - [Dashboard H2GREEN](../../python/Dashboards/Dashboard_H2Green_v1.0.py)
+- [Arduino Velocidad](../../arduino/velocidad/Velocidad_H2Green_v1.0.ino)
 
 ---
 
 # 05. Secuencia Detallada del Lazo de Fuerza y Desplazamiento
 
-**Archivo:** `05_Secuencia_Detallada_Lazo_de_Fuerza_y_Desplazamiento.png`
+![Lazo Fuerza](05_Secuencia_Detallada_Lazo_de_Fuerza_y_Desplazamiento.png)
 
-Describe la adquisición de fuerza mediante la celda de carga KIS y el módulo HX711, junto con el desplazamiento obtenido mediante la cámara Basler para generar las curvas Fuerza–Desplazamiento y Esfuerzo–Deformación.
+## Objetivo
 
-### Código asociado
+Describir la adquisición de fuerza mediante la celda de carga y HX711, junto con el desplazamiento obtenido mediante visión artificial usando la cámara Basler.
 
-- [Arduino Fuerza](../../arduino/fuerza/Fuerza_H2Green_v1.0.ino)
+## Implementación relacionada
+
 - [Dashboard H2GREEN](../../python/Dashboards/Dashboard_H2Green_v1.0.py)
+- [Arduino Fuerza](../../arduino/fuerza/Fuerza_H2Green_v1.0.ino)
 
 ---
 
 # 06. Secuencia Completa del Proceso
 
-**Archivo:** `06_Secuencia_Completa_del_Proceso.png`
+![Secuencia Completa](06_Secuencia_Completa_del_Proceso.png)
 
-Resume la operación completa del sistema, integrando todos los lazos de control desde el inicio del ensayo hasta la generación de resultados.
+## Objetivo
 
-### Código asociado
+Integrar todos los lazos de control y mostrar la secuencia completa de operación del sistema H2GREEN desde la inicialización hasta la finalización del ensayo.
+
+## Implementación relacionada
 
 - [Dashboard H2GREEN](../../python/Dashboards/Dashboard_H2Green_v1.0.py)
 - [Arduino Mega Maestro](../../arduino/maestro/Mega_H2Green_v1.0.ino)
 
 ---
 
-# Estado del proyecto
+# Estado del Proyecto
 
-**Versión del sistema:** Prototipo 001
+**Versión:** Prototipo 001
 
-**Estado actual:**
+### Estado actual
 
-- ✔ Arquitectura general validada.
-- ✔ Dashboard Python operativo.
-- ✔ Arduino Mega Maestro operativo.
-- ✔ Cuatro Arduino esclavos operativos.
-- ✔ Integración de la cámara Basler en desarrollo.
-- ✔ Integración progresiva de hardware definitivo (transmisores de presión, electroválvulas y sistema térmico).
-
----
-
-## Estructura del proyecto relacionada
-
-```text
-arduino/
-├── maestro/
-├── presion/
-├── fuerza/
-├── temperatura/
-└── velocidad/
-
-python/
-└── Dashboards/
-```
+- ✅ Arquitectura general validada.
+- ✅ Dashboard Python operativo.
+- ✅ Arduino Mega Maestro operativo.
+- ✅ Arduino esclavo de presión operativo.
+- ✅ Arduino esclavo de fuerza operativo.
+- ✅ Arduino esclavo de temperatura operativo.
+- ✅ Arduino esclavo de velocidad operativo.
+- 🔄 Integración de la cámara Basler en desarrollo.
+- 🔄 Integración del hardware definitivo (transmisores, electroválvulas y sistema térmico).
 
 ---
 
-**Proyecto H2GREEN**
-
-**Universidad Técnica Federico Santa María**  
-Departamento de Ingeniería Mecánica / Departamento de Electrónica
+**Proyecto H2GREEN**  
+Universidad Técnica Federico Santa María  
+Departamento de Ingeniería Mecánica – Departamento de Electrónica
